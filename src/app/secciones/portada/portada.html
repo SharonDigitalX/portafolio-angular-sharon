@@ -1,0 +1,30 @@
+<section id="inicio" class="portada">
+  <img class="portada-fondo" src="/img/portada.webp" alt="" aria-hidden="true" />
+  <div class="portada-velo"></div>
+
+  <div class="wrap">
+    <div class="folder">
+      <span class="folder-tab microlabel">{{ marca }}</span>
+
+      <p class="microlabel estado"><span class="punto"></span> {{ rol }}</p>
+
+      <h1 class="titular">
+        <span class="soft">Ideas que se convierten en</span><br>
+        <span class="text-gradient fuerte">impacto</span><span class="accent">.</span>
+      </h1>
+
+      <p class="descripcion">{{ descripcion }}</p>
+
+      <ul class="tags">
+        @for (item of identificadores; track item) {
+          <li class="tag">{{ item }}</li>
+        }
+      </ul>
+
+      <div class="cta-pill">
+        <a class="seg seg-main" href="#contacto">Inicia tu proyecto</a>
+        <a class="seg seg-cream" href="#proyectos">Explora mis proyectos</a>
+      </div>
+    </div>
+  </div>
+</section>

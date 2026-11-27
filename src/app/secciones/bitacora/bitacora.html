@@ -1,0 +1,48 @@
+<section id="bitacora" class="bitacora wrap">
+  <header class="sec-head">
+    <p class="microlabel">04 · Bitácora</p>
+    <h2 class="sec-title">
+      <span class="soft">Ideas que quiero</span>
+      <span class="text-gradient">convertir en proyectos</span><span class="accent">.</span>
+    </h2>
+    <p class="sec-sub">Mi bitácora: lo que imagino y lo que sigue. Agrega tu propia idea.</p>
+  </header>
+
+  <div class="row g-4">
+
+    <!-- Listado: UL + LI con la directiva ngFor -->
+    <div class="col-lg-7">
+      <div class="glass panel-ideas p-4">
+        <p class="microlabel mb-3">{{ ideas.length }} ideas en la lista</p>
+
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item" *ngFor="let idea of ideas">
+            <app-idea-item [idea]="idea" />
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Formulario con variables de plantilla (#) -->
+    <div class="col-lg-5">
+      <form class="glass panel-ideas p-4">
+        <p class="microlabel mb-3">Agregar una idea</p>
+
+        <div class="mb-3">
+          <label class="form-label microlabel" for="titulo">Título</label>
+          <input #titulo id="titulo" type="text" class="form-control" placeholder="Ej: App para ..." />
+        </div>
+
+        <div class="mb-4">
+          <label class="form-label microlabel" for="descripcion">Descripción</label>
+          <input #descripcion id="descripcion" type="text" class="form-control" placeholder="¿De qué trata?" />
+        </div>
+
+        <button type="submit" class="btn btn-primary w-100" (click)="agregar($event, titulo, descripcion)">
+          Agregar a la lista
+        </button>
+      </form>
+    </div>
+
+  </div>
+</section>

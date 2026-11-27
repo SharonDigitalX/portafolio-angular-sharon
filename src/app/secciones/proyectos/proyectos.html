@@ -1,0 +1,16 @@
+<section id="proyectos" class="proyectos wrap">
+  <header class="sec-head">
+    <p class="microlabel">02 · Proyectos</p>
+    <h2 class="sec-title">
+      <span class="soft">De la idea</span>
+      <span class="text-gradient">al código</span><span class="accent">.</span>
+    </h2>
+    <p class="sec-sub">Experimentos, soluciones y experiencias construidas.</p>
+  </header>
+
+  <div class="rejilla">
+    @for (p of proyectos; track p.id) {
+      <app-proyecto-card [proyecto]="p" />
+    }
+  </div>
+</section>

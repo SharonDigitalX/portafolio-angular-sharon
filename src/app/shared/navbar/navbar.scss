@@ -1,0 +1,56 @@
+.nav-glass {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(9, 10, 22, 0.7);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--line);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  text-decoration: none;
+}
+.brand-sh { font-weight: 700; color: var(--text); }
+.brand-detalle { font-weight: 300; color: var(--muted); }
+.brand-dot {
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: 50%;
+  background: var(--magenta);
+  box-shadow: 0 0 12px var(--magenta);
+}
+
+.navbar-nav {
+  --bs-nav-link-color: var(--muted);
+  --bs-nav-link-hover-color: var(--text);
+}
+.navbar-nav .nav-link {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+
+.btn-cta {
+  padding: 0.5rem 1.2rem;
+  border: 1px solid var(--lavender);
+  border-radius: 999px;
+  background: rgba(188, 166, 255, 0.12);
+  color: var(--text);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background 0.2s, box-shadow 0.2s;
+}
+.btn-cta:hover {
+  background: rgba(188, 166, 255, 0.28);
+  box-shadow: 0 0 20px rgba(227, 73, 255, 0.4);
+}

@@ -1,0 +1,23 @@
+<section id="servicios" class="servicios wrap">
+  <header class="sec-head">
+    <p class="microlabel">03 · Servicios</p>
+    <h2 class="sec-title">
+      <span class="soft">Tecnología, creatividad</span>
+      <span class="text-gradient">y solución</span><span class="accent">.</span>
+    </h2>
+    <p class="sec-sub">Las áreas en las que estoy construyendo experiencia.</p>
+  </header>
+
+  <div class="row g-4">
+    @for (s of servicios; track s.numero) {
+      <div class="col-md-6 col-xl-3">
+        <article class="servicio glass" [attr.data-tono]="s.tono">
+          <span class="numero">{{ s.numero }}</span>
+          <h3 class="servicio-titulo">{{ s.titulo }}</h3>
+          <p class="servicio-texto">{{ s.descripcion }}</p>
+          <p class="nivel microlabel"><span class="nivel-punto"></span> {{ s.nivel }}</p>
+        </article>
+      </div>
+    }
+  </div>
+</section>

@@ -1,0 +1,39 @@
+<section id="sobre-mi" class="sobre wrap">
+  <header class="sec-head">
+    <p class="microlabel">01 · Sobre mí</p>
+    <h2 class="sec-title">
+      <span class="soft">Construyendo mi futuro,</span>
+      <span class="text-gradient">proyecto a proyecto</span><span class="accent">.</span>
+    </h2>
+    <p class="sec-sub">Conoce mi camino, mis intereses y mi visión.</p>
+  </header>
+
+  <div class="panel row g-4 align-items-center">
+
+    <div class="col-lg-4">
+      <div class="perfil">
+        <div class="avatar" aria-hidden="true">
+          <span><b class="text-gradient">SH</b></span>
+        </div>
+        <h3 class="nombre">{{ nombre }}</h3>
+        <p class="microlabel">{{ rol }}</p>
+        <p class="carrera">{{ carrera }}</p>
+      </div>
+    </div>
+
+    <div class="col-lg-8">
+      <blockquote class="declaracion">{{ declaracion }}</blockquote>
+      <p class="parrafo">{{ parrafo }}</p>
+
+      <div class="datos">
+        @for (d of datos; track d.etiqueta) {
+          <div class="dato">
+            <span class="dato-valor text-gradient">{{ d.valor }}</span>
+            <span class="microlabel">{{ d.etiqueta }}</span>
+          </div>
+        }
+      </div>
+    </div>
+
+  </div>
+</section>

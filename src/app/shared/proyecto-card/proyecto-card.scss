@@ -1,0 +1,84 @@
+.carpeta {
+  position: relative;
+  margin-top: 2.3rem;
+  transition: transform 0.25s ease-out;
+}
+.carpeta:hover { transform: translateY(-6px); }
+
+// Brillo de suelo bajo la carpeta (efecto espejo)
+.carpeta::after {
+  content: '';
+  position: absolute;
+  left: 8%;
+  right: 8%;
+  bottom: -1.5rem;
+  height: 1.3rem;
+  background: radial-gradient(ellipse at center, rgba(227, 73, 255, 0.35), transparent 70%);
+  filter: blur(10px);
+  pointer-events: none;
+}
+
+.carpeta-tab {
+  position: absolute;
+  left: 0;
+  top: -2.3rem;
+  height: calc(2.3rem + 1px);
+  display: flex;
+  align-items: center;
+  padding: 0 1.3rem;
+  border: 1px solid rgba(188, 166, 255, 0.25);
+  border-bottom: 0;
+  border-radius: 1rem 1rem 0 0;
+  background: #1a1233;
+  color: var(--lavender);
+}
+
+.carpeta-cuerpo {
+  padding: 1.1rem 1.1rem 1.6rem;
+  border: 1px solid rgba(188, 166, 255, 0.22);
+  border-radius: 0 var(--radius) var(--radius) var(--radius);
+  background:
+    linear-gradient(150deg, rgba(118, 38, 201, 0.3), rgba(9, 10, 22, 0.88) 55%),
+    rgba(9, 10, 22, 0.6);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 24px 60px rgba(0, 0, 0, 0.45);
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+.carpeta:hover .carpeta-cuerpo {
+  border-color: var(--magenta);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25), 0 24px 60px rgba(0, 0, 0, 0.45), 0 0 50px rgba(227, 73, 255, 0.3);
+}
+
+.monitor {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  margin-bottom: 1.2rem;
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+  background: #0b0a1a;
+}
+.monitor img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+  transition: transform 0.7s;
+}
+.carpeta:hover .monitor img { transform: scale(1.06); }
+
+// Barrido de luz al pasar el mouse
+.monitor::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(115deg, transparent 40%, rgba(255, 255, 255, 0.2) 50%, transparent 60%);
+  transform: translateX(-110%);
+  transition: transform 0.9s;
+  pointer-events: none;
+}
+.carpeta:hover .monitor::after { transform: translateX(110%); }
+
+.titulo { margin: 0 0.3rem 0.2rem; font-size: 1.5rem; font-weight: 700; }
+.subtitulo { margin: 0 0.3rem 0.8rem; font-family: var(--font-display); font-weight: 300; color: var(--lavender); }
+.texto { margin: 0 0.3rem 1.2rem; font-size: 0.92rem; line-height: 1.65; color: var(--muted); }
+.carpeta-cuerpo .tags { margin-inline: 0.3rem; }

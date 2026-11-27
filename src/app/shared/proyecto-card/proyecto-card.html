@@ -1,0 +1,19 @@
+<article class="carpeta">
+  <span class="carpeta-tab microlabel">{{ proyecto.categoria }}</span>
+
+  <div class="carpeta-cuerpo">
+    <div class="monitor">
+      <img [src]="proyecto.imagen" [alt]="'Captura de ' + proyecto.titulo" loading="lazy" />
+    </div>
+
+    <h3 class="titulo">{{ proyecto.titulo }}</h3>
+    <p class="subtitulo">{{ proyecto.subtitulo }}</p>
+    <p class="texto">{{ proyecto.descripcion }}</p>
+
+    <ul class="tags">
+      @for (t of proyecto.tecnologias; track t) {
+        <li class="tag">{{ t }}</li>
+      }
+    </ul>
+  </div>
+</article>

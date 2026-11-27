@@ -1,0 +1,11 @@
+.idea-num {
+  padding: 0.45rem 0.7rem;
+  border: 1px solid rgba(227, 73, 255, 0.55);
+  background: rgba(227, 73, 255, 0.14);
+  color: var(--text);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+}
+.idea-titulo { margin: 0 0 0.3rem; font-size: 1.1rem; font-weight: 700; }
+.idea-texto { font-size: 0.92rem; line-height: 1.6; color: var(--muted); }

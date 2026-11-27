@@ -1,0 +1,38 @@
+.servicios { padding-block: 4rem 3rem; }
+
+.servicio {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 1.6rem;
+  background: linear-gradient(160deg, rgba(118, 38, 201, 0.2), rgba(9, 10, 22, 0.7) 60%);
+  transition: transform 0.25s, border-color 0.25s, box-shadow 0.25s;
+}
+.servicio:hover {
+  transform: translateY(-6px);
+  border-color: var(--lavender);
+  box-shadow: 0 0 40px rgba(188, 166, 255, 0.2);
+}
+
+.numero {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  letter-spacing: 0.18em;
+  color: var(--lavender);
+}
+.servicio-titulo { margin: 1rem 0 0.6rem; font-size: 1.2rem; font-weight: 700; }
+.servicio-texto { flex: 1; margin: 0 0 1.4rem; font-size: 0.92rem; line-height: 1.65; color: var(--muted); }
+
+.nivel {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+  color: var(--text);
+}
+.nivel-punto { width: 0.5rem; height: 0.5rem; border-radius: 50%; }
+
+.servicio[data-tono='cyan'] .nivel-punto { background: var(--cyan); box-shadow: 0 0 10px var(--cyan); }
+.servicio[data-tono='lavender'] .nivel-punto { background: var(--lavender); box-shadow: 0 0 10px var(--lavender); }
+.servicio[data-tono='magenta'] .nivel-punto { background: var(--magenta); box-shadow: 0 0 10px var(--magenta); }
